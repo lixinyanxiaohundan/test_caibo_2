@@ -2,6 +2,7 @@
 import unittest
 from test_caibo_2.com.caibo.api.Log import Log
 from test_caibo_2.com.caibo.business.HotAnchorHelper import HotAnchorHelper
+from test_caibo_2.com.caibo.api.Utils import Utils
 
 #财务记录
 class Test_HotAnchor(unittest.TestCase):
@@ -29,4 +30,6 @@ class Test_HotAnchor(unittest.TestCase):
         Log.print_case_info_My(self,case_name)
         # 调用方法输入用例名字,直播间索引,从0开始,0是第一个直播间
         HotAnchorHelper.to_anchor_room(self,case_name,0,2)
+        Utils.getImage(self, HotAnchorHelper.driver)
+        HotAnchorHelper.driver.keyevent(4)  # 退出直播间
         print("本条用例执行通过")

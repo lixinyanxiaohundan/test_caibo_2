@@ -112,7 +112,7 @@ class Utils:
         time.sleep(second)
         day = time.strftime("%Y_%m_%d",time.localtime(time.time()))
         fq = "../screenShots/"+day  
-        #fq =os.getcwd()[:-4] +'screenShots\\'+day    根据获取的路径，然后截取路径保存到自己想存放的目录下
+        # fq =os.getcwd()[:-4] +'screenShots\\'+day    根据获取的路径，然后截取路径保存到自己想存放的目录下
         now_date_time=Utils.getDateTime(self)
         type = '.png'
         filename = ""

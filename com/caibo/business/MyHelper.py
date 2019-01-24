@@ -6,8 +6,10 @@ import time
 from test_caibo_2.com.caibo.ui.FinancialRecords import Financialecords
 from test_caibo_2.com.caibo.ui.FinancialOperationPage import FinancialOperationPage
 
+
 class MyHelper(BaseHelper):
     global driver
+
     def __init__(self):
         pass
    
@@ -28,7 +30,7 @@ class MyHelper(BaseHelper):
             print(e)
             raise SystemError
         
-    def recharge_wechat_click(self,amount,case_name,second):   #点击金额进行充值
+    def recharge_wechat_click(self,amount,case_name,second):   # 点击金额进行充值
         try:
             time.sleep(second)
             Utils.getElementById(self,MyHelper.driver,MyPage.resid_my_button).click()
@@ -56,6 +58,17 @@ class MyHelper(BaseHelper):
                 raise SystemError
             Utils.getElementById(self,MyHelper.driver,FinancialOperationPage.resid_recharge_wechatpay).click()
             Utils.getElementById(self,MyHelper.driver,FinancialOperationPage.resid_recharge_commit).click()
+            # 微信验证登录页面，使用adb返回按钮
+            if amount < 10:
+                # 不能低于10元提示，截图
+                Utils.getImage(self,MyHelper.driver, case_name, second)
+                time.sleep(1)
+                pass
+            else:
+                # 跳转登录微信,手机物理键返回
+                MyHelper.driver.keyevent(4)
+                pass
+
             if second>0 :
                 Utils.getImage(self,MyHelper.driver, case_name, second)
             else:
@@ -99,10 +112,22 @@ class MyHelper(BaseHelper):
                       FinancialOperationPage.resposition_recharge_instruction_agree_y1,
                       FinancialOperationPage.resposition_recharge_instruction_agree_x2,
                       FinancialOperationPage.resposition_recharge_instruction_agree_y2)
+
+            if amount < 10:
+                # 不能低于10元提示，截图
+                Utils.getImage(self,MyHelper.driver, case_name, second)
+                time.sleep(1)
+                pass
+            else:
+                # 跳转登录微信,手机物理键返回
+                MyHelper.driver.keyevent(4)
+                pass
+
             if second>0 :
                 Utils.getImage(self,MyHelper.driver, case_name, second)
             else:
                 Utils.getImage(self,MyHelper.driver, case_name, 1)
+            MyHelper.driver.keyevent(4)  # 手机返回按钮（微信app加密处理）
             Utils.getElementById(self,MyHelper.driver,FinancialOperationPage.resid_recharge_wechat_back).click()
             Utils.getElementById(self,MyHelper.driver,FinancialOperationPage.resid_back_button).click()
         except Exception as e:
@@ -114,7 +139,19 @@ class MyHelper(BaseHelper):
         try:
             time.sleep(second)
             Utils.getElementById(self,MyHelper.driver,MyPage.resid_my_button).click()
-            
+            Utils.getElementById(self, MyHelper.driver, MyPage.resid_recharge).click()
+            Utils.getElementById(self, MyHelper.driver, FinancialOperationPage.resid_recharge_money_input).send_keys(amount)
+            Utils.getElementById(self, MyHelper.driver, FinancialOperationPage.resid_recharge_wechatpay).click()
+            Utils.getElementById(self, MyHelper.driver, FinancialOperationPage.resid_recharge_commit).click()
+            if amount < 10:
+                # 不能低于10元提示，截图
+                Utils.getImage(self,MyHelper.driver, case_name, second)
+                time.sleep(1)
+                pass
+            else:
+                # 跳转登录微信,手机物理键返回
+                MyHelper.driver.keyevent(4)
+                pass
             if second>0 :
                 Utils.getImage(self,MyHelper.driver, case_name, second)
             else:
@@ -148,12 +185,12 @@ class MyHelper(BaseHelper):
             my_page = MyPage()
             util=Utils()
             util.getElementById(MyHelper.driver,my_page.resid_my_button)
-            #点击清理缓存,会弹出确认框
+            # 点击清理缓存,会弹出确认框
             util.getElementById(MyHelper.driver,my_page.resid_clear_cache).click()
-            #由于uiauto定位不到确认框元素,此处采用绝对定位
-            #取消  128  680,245-744
-            #确定  449  695,600 746
-            #点击取消
+            # 由于uiauto定位不到确认框元素,此处采用绝对定位
+            # 取消  128  680,245-744
+            # 确定  449  695,600 746
+            # 点击取消
             time.sleep(2)
             util.tap(MyHelper.driver, 128, 680, 245, 744)
             if second>0 :
@@ -166,18 +203,18 @@ class MyHelper(BaseHelper):
             Utils.getElementById(self, MyHelper.driver, MyPage.resid_back_button)
             raise SystemError
         
-    def clear_cache_really(self,case_name,second):   #清理缓存点确定
+    def clear_cache_really(self,case_name,second):   # 清理缓存点确定
         try:
             time.sleep(second)
             my_page = MyPage()
             util=Utils()
             util.getElementById(MyHelper.driver,my_page.resid_my_button)
-            #点击清理缓存,会弹出确认框
+            # 点击清理缓存,会弹出确认框
             util.getElementById(MyHelper.driver,my_page.resid_clear_cache).click()
-            #由于uiauto定位不到确认框元素,此处采用绝对定位
-            #取消  128  680,245-744
-            #确定  449  695,600 746
-            #点击取消
+            # 由于uiauto定位不到确认框元素,此处采用绝对定位
+            # 取消  128  680,245-744
+            # 确定  449  695,600 746
+            # 点击取消
             util.tap(MyHelper.driver, 449, 695, 600, 746)
             if second>0 :
                 util.take_screenShot(MyHelper.driver,case_name,second)
@@ -188,4 +225,4 @@ class MyHelper(BaseHelper):
             print(e)
             raise SystemError
         
-        
+
