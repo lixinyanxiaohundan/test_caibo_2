@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from com.caibo.business.LoginHelper import LoginHelper
-from com.caibo.api.Log import Log
+from test_caibo_2.com.caibo.business.LoginHelper import LoginHelper
+from test_caibo_2.com.caibo.api.Log import Log
 import unittest
 import time
  

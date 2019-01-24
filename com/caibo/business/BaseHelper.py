@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os, time, unittest
-from com.caibo.api.Utils import Utils
+from test_caibo_2.com.caibo.api.Utils import Utils
 from appium import webdriver
 
 

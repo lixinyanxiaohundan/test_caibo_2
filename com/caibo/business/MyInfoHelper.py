@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-from com.caibo.api.Utils import Utils
-from com.caibo.ui.MyInfoPage import MyInfoPage
-from com.caibo.business.BaseHelper import BaseHelper
+from test_caibo_2.com.caibo.api.Utils import Utils
+from test_caibo_2.com.caibo.ui.MyInfoPage import MyInfoPage
+from test_caibo_2.com.caibo.business.BaseHelper import BaseHelper
 import time
-from com.caibo.ui.LoginPage import LoginPage
+from test_caibo_2.com.caibo.ui.LoginPage import LoginPage
 
 class MyInfoHelper(BaseHelper):
     global driver

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from com.caibo.ui.PublicPage import PublicPage
+from test_caibo_2.com.caibo.ui.PublicPage import PublicPage
 
 class MyInfoPage(PublicPage):   #个人信息页面
     def __init__(self):

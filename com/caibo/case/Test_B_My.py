@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import time
 import unittest
-from com.caibo.api.Log import Log
-from com.caibo.business.MyHelper import MyHelper
+from test_caibo_2.com.caibo.api.Log import Log
+from test_caibo_2.com.caibo.business.MyHelper import MyHelper
 
 
 class Test_B_My(unittest.TestCase):

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
-from com.caibo.api.Log import Log
-from com.caibo.business.HotAnchorHelper import HotAnchorHelper
+from test_caibo_2.com.caibo.api.Log import Log
+from test_caibo_2.com.caibo.business.HotAnchorHelper import HotAnchorHelper
 
 #财务记录
 class Test_HotAnchor(unittest.TestCase):

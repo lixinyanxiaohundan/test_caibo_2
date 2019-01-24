@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
-from com.caibo.api.Log import Log
-from com.caibo.business.MyInfoHelper import MyInfoHelper
-from com.caibo.api.Utils import Utils
+from test_caibo_2.com.caibo.api.Log import Log
+from test_caibo_2.com.caibo.business.MyInfoHelper import MyInfoHelper
+from test_caibo_2.com.caibo.api.Utils import Utils
 
 
 class Test_MyInfo(unittest.TestCase):

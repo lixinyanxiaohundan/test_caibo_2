@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from com.caibo.api.Utils import Utils
-from com.caibo.ui.MyPage import MyPage
-from com.caibo.business.BaseHelper import BaseHelper
+from test_caibo_2.com.caibo.api.Utils import Utils
+from test_caibo_2.com.caibo.ui.MyPage import MyPage
+from test_caibo_2.com.caibo.business.BaseHelper import BaseHelper
 import time
-from com.caibo.ui.FinancialRecords import Financialecords
-from com.caibo.ui.FinancialOperationPage import FinancialOperationPage
+from test_caibo_2.com.caibo.ui.FinancialRecords import Financialecords
+from test_caibo_2.com.caibo.ui.FinancialOperationPage import FinancialOperationPage
 
 class MyHelper(BaseHelper):
     global driver

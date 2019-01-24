@@ -3,8 +3,8 @@ Created on 2018年12月19日
 
 @author: lipengjie
 '''
-from com.caibo.ui.PublicPage import PublicPage
-from com.caibo.ui.MyPage import MyPage
+from test_caibo_2.com.caibo.ui.PublicPage import PublicPage
+from test_caibo_2.com.caibo.ui.MyPage import MyPage
 
 class FinancialOperationPage(MyPage):   #财务操作页面,包含充值和提现等
     '''

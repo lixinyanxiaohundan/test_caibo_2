@@ -1,4 +1,4 @@
-from com.caibo.ui.PublicPage import PublicPage
+from test_caibo_2.com.caibo.ui.PublicPage import PublicPage
 
 class AboutUs(PublicPage):
     '''
