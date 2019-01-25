@@ -2,7 +2,7 @@
 import datetime,unittest
 import sys
 import os
-os.chdir('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2')
+os.chdir('C:/Users/Administrator/Desktop/py/TestPython1/test_caibo_2')
 for file in os.listdir(os.getcwd()):
     print(file)
 sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2')
