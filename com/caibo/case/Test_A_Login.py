@@ -77,4 +77,4 @@ class Test_A_Login(unittest.TestCase):
         LoginHelper.login(self,mobile,pwd,case_name,5,0)  # 调用方法输入手机号,密码，用例名字
         time.sleep(2) 
      
- 
+
