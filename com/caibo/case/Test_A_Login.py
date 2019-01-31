@@ -2,7 +2,12 @@
 from test_caibo_2.com.caibo.business.LoginHelper import LoginHelper
 from test_caibo_2.com.caibo.api.Log import Log
 import unittest
+import pytest
 import time
+
+
+class Test_a_l(pytest):
+    pass
 
 
 class Test_A_Login(unittest.TestCase):    
