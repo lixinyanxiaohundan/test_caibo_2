@@ -7,11 +7,19 @@ for file in os.listdir(os.getcwd()):
     print(file)
 sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2')
 sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2/com')
-sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2/com/caibo/case')
+sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2/com/caibo/case/_')
 sys.path.append('/Users/Administrator/Desktop/py/TestPython1/test_caibo_2/com/caibo/api')
 from test_caibo_2.com.caibo.api.Utils import Utils
 from test_caibo_2.com.caibo.api.HTMLTestRunner import HTMLTestRunner
 
+
+# rootpath=str("C:/Users/Administrator/Desktop/py/TestPython1/test_caibo_2")
+# syspath=sys.path
+# sys.path=[]
+# sys.path.append(rootpath)  # 将工程根目录加入到python搜索路径中
+# # 将工程目录下的一级目录添加到python搜索路径中
+# sys.path.extend([rootpath+i for i in os.listdir(rootpath) if i[0] != "."])
+# sys.path.extend(syspath)
 
 # sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 # sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
