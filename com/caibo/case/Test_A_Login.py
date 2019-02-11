@@ -4,18 +4,21 @@ from test_caibo_2.com.caibo.api.Log import Log
 import unittest
 import pytest
 import time
+import allure
+import yaml
 
+# class Test_a_l(pytest):
+#     pass
 
-class Test_a_l(pytest):
-    pass
-
-
+@allure.feature("登录测试")
 class Test_A_Login(unittest.TestCase):    
 
     # case_name保持10个字,不够了使用__填充
     # 每天要把HTMLTestRunner中第722行的文件夹名字改为当天的,要不无法查看报告中的图片
     # 第一个测试方法需要初始化状态,driver为1进行初始化
     # 只输入错误账号（11111111111）点击登录
+    # @pytest.mark.run(order=1)
+    @allure.story("输入错误账号登录-1")
     def test_login1(self):
         mobile="11111111111"
         pwd=""
@@ -24,6 +27,8 @@ class Test_A_Login(unittest.TestCase):
         LoginHelper.login(self,mobile,pwd,case_name,0,1)  # 调用方法输入手机号,密码，用例名字
         print("执行结束")
     # 只输入错误手机号（1503107628）10位点击登录
+
+    @allure.story("输入错误账号登录-2")
     def test_login2(self):
         mobile="1503107628"
         pwd=""
@@ -82,4 +87,4 @@ class Test_A_Login(unittest.TestCase):
         LoginHelper.login(self,mobile,pwd,case_name,5,0)  # 调用方法输入手机号,密码，用例名字
         time.sleep(2) 
      
-
+# py.test test/ --alluredir ./result/
