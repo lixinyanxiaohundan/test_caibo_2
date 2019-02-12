@@ -18,3 +18,7 @@ class Log:
     def print_case_info_recharge(self,amount,case_name):
         print('执行充值相关测试用例：\n'+case_name+'\n参数：\n'+'金额:'+amount)
         pass
+
+    def print_case_info_talk(self, case_name, cont):
+        print('执行直播间内聊天的测试用例：\n'+case_name + '\n参数：\n'+'cont' + cont)
+        pass

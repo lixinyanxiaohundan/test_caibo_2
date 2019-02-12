@@ -20,4 +20,6 @@ class Test_Talk(unittest.TestCase):
     # case_name保持10个字,不够了使用--填充
     #
     def test_talk1(self):
+        case_name = "输入空格并发送"
+        Log.print_case_info_talk(case_name, )
         pass
