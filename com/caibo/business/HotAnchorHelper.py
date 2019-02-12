@@ -45,3 +45,18 @@ class HotAnchorHelper(BaseHelper):
             print("发现异常")
             print(e)
             raise SystemError
+
+    def exit_room(self):
+        try:
+            # HotAnchorHelper.to_hot_page()
+            # HotAnchorHelper.to_anchor_room()
+            self.driver.keyevent(4)  # 方法一 手机物理键
+
+            hot_anchor_page = HotAnchorPage()
+            Utils.getElementById().click()  # 方法二 直播间右上方退出按钮，为保万一最好点击两次=。=
+            pass
+        except Exception as e:
+            print("发现异常")
+            print(e)
+            raise SystemError
+
