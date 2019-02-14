@@ -12,3 +12,4 @@ class TalkHelper(BaseHelper):
     def to_Hot_room(self):
         HotAnchorHelper.to_hot_page()
         HotAnchorHelper.to_anchor_room()
+        Utils
