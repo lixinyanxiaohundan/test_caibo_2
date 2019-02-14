@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from test_caibo_2.com.caibo.api.Log import Log
-from test_caibo_2.com.caibo.business.HotAnchorHelper import HotAnchorHelper
+from test_caibo_2.com.caibo.business.TalkHelper import TalkHelper
 from test_caibo_2.com.caibo.api.Utils import Utils
 
 
@@ -18,8 +18,11 @@ class Test_Talk(unittest.TestCase):
         pass
 
     # case_name保持10个字,不够了使用--填充
-    #
+    # 输入空格并发送
     def test_talk1(self):
         case_name = "输入空格并发送"
-        Log.print_case_info_talk(case_name, )
+        Log.print_case_info_talk(case_name)
+        TalkHelper.Talk(self, "   ", case_name)
+        
+
         pass

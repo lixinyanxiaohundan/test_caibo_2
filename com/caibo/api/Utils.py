@@ -7,38 +7,40 @@ import random
 class Utils:
     def __init__(self):
         pass
-        #getElementById(driver,loginPage.mobile)
-        #return driver3.findElementById(mobile);
+        # getElementById(driver,loginPage.mobile)
+        # return driver3.findElementById(mobile);
             
-    #根据元素id获取元素
+    # 根据元素id获取元素
     def getElementById(self,driver3,resid):
         return driver3.find_element_by_id(resid)
-        #return driver3.findElementById(mobile);
+        # return driver3.findElementById(mobile);
         
-    #根据传来的id获取其中索引为anchor_index的元素
+    # 根据传来的id获取其中索引为anchor_index的元素
     def get_element_by_index(self,driver3,resid,anchor_index):
         return driver3.find_elements_by_id(resid)[anchor_index]
-        #return eles.index(3)
-            
-    #获取当前的日期并转换格式    
+        # return eles.index(3)
+
+    def get_element_by_text(self, driver3, text):
+        return driver3.find_element_by_xpath("//*[text()='%s']" % text)
+        pass
+    # 获取当前的日期并转换格式
     def getDateTime(self):
         now_time = datetime.datetime.now().strftime('%Y_%m_%d')
         return now_time;
    
-    #点击屏幕坐标框,两个参数一个是左上角xy坐标,一个是右下角xy坐标
+    # 点击屏幕坐标框,两个参数一个是左上角xy坐标,一个是右下角xy坐标
     def tap(self,driver,x,y,x1,y1):
         #取消  128  680,245-744
         #确定  449  695,600 746
         time.sleep(2)
         driver.tap([(x,y), (x1,y1)], 5) 
     
-    #使用adb命令点击指定坐标,x,y
+    # 使用adb命令点击指定坐标,x,y
     def adb_click(self,x,y):
         time.sleep(2)
         order='adb devices' #创建命令
         pi= subprocess.Popen(order,shell=True,stdout=subprocess.PIPE)
-        
-        
+
     def mkdir(self,path):
         # 去除首位空格
         path=path.strip()
