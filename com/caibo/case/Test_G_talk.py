@@ -17,12 +17,45 @@ class Test_Talk(unittest.TestCase):
         print("aaa")
         pass
 
-    # case_name保持10个字,不够了使用--填充
     # 输入空格并发送
     def test_talk1(self):
-        case_name = "输入空格并发送"
-        Log.print_case_info_talk(case_name)
-        TalkHelper.Talk(self, "   ", case_name)
-        
+        case_name = "输入正确的内容"
+        text = "略略略"
+        Log.print_case_info_talk(case_name, text)
+        TalkHelper.Talk_first(self, text, case_name, 1)
+        print("%s 本次测试用例执行完成" %case_name)
 
+    def test_talk2(self):
+        case_name = "输入特殊符号"
+        text = "@#$%_-+"
+        Log.print_case_info_talk(case_name, text)
+        TalkHelper.Talk(self, text, case_name, 1)
+        print("%s 本次用例执行完成" %case_name)
+        #
+
+    def test_talk3(self):
+        case_name = "输入数字"
+        text = "1234567"
+        Log.print_case_info_talk(case_name, text)
+        TalkHelper.Talk(self, text, case_name, 1)
+        print("%s本次用例执行完成" %case_name)
+
+    def test_talk4(self):
+        case_name = "输入英文"
+        text = "hello world"
+        Log.print_case_info_talk(case_name, text)
+        TalkHelper.Talk(self, text, case_name, 1)
+        print("%s 本次用例执行完成" % case_name)
+
+    def test_talk5(self):
+        case_name = "输入空格"
+        text = "   "
+        Log.print_case_info_talk(case_name, text)
+        TalkHelper.Talk(self, text, case_name, 1)
+        print("%s 本次用例执行完成" % case_name)
+
+    def test_talk6(self):
+        case_name = "输入表情"
+        Log.print_case_info_talk(case_name)
+        TalkHelper.Talkd(case_name, 1)
         pass

@@ -26,9 +26,9 @@ class Utils:
     # 获取当前的日期并转换格式
     def getDateTime(self):
         now_time = datetime.datetime.now().strftime('%Y_%m_%d')
-        return now_time;
+        return now_time
    
-    # 点击屏幕坐标框,两个参数一个是左上角xy坐标,一个是右下角xy坐标
+    # 点击屏幕坐标框,两个参数一个是左上角xy坐标,一个是右下角x1y1坐标
     def tap(self,driver,x,y,x1,y1):
         #取消  128  680,245-744
         #确定  449  695,600 746
