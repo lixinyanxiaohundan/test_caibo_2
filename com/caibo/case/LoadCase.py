@@ -41,7 +41,7 @@ def creat_suite():
     uit = unittest.TestSuite()
 
     # 获取所有以test开头.py结尾的测试用例文件
-    #discover = unittest.defaultTestLoader.discover(case_path, pattern="Test_*.py", top_level_dir=None)
+    # discover = unittest.defaultTestLoader.discover(case_path, pattern="Test_*.py", top_level_dir=None)
     discover = unittest.defaultTestLoader.discover(r'/Users/Administrator/Desktop/py/TestPython1/test_caibo_2/com/caibo/case',
                                                    pattern="Test_*.py", top_level_dir=None)
     print(discover)

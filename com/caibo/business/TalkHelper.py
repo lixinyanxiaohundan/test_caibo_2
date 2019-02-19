@@ -16,11 +16,11 @@ class TalkHelper(BaseHelper):
             Utils.getElementById(HotAnchorPage.resid_edit_mess).send_keys(text)
             Utils.getElementById(HotAnchorPage.resid_send_mess).click()
             if second > 0:
-                # util.take_screenShot(LoginHelper.driver, case_name, second)
-                Utils.getImage(HotAnchorHelper.driver, case_name, second)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, second)
             else:
-                # util.take_screenShot(LoginHelper.driver, case_name, 0)
-                Utils.getImage(HotAnchorHelper.driver, case_name, 0)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, 0)
             print("本次测试完成")
         except Exception as e:
             print("发现异常")
@@ -33,11 +33,11 @@ class TalkHelper(BaseHelper):
             Utils.getElementById(HotAnchorPage.resid_edit_mess).send_keys(text)
             Utils.getElementById(HotAnchorPage.resid_send_mess).click()
             if second > 0:
-                # util.take_screenShot(LoginHelper.driver, case_name, second)
-                Utils.getImage(HotAnchorHelper.driver, case_name, second)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, second)
             else:
-                # util.take_screenShot(LoginHelper.driver, case_name, 0)
-                Utils.getImage(HotAnchorHelper.driver, case_name, 0)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, 0)
             print("本次测试完成")
         except Exception as e:
             print("发现异常")
@@ -53,11 +53,11 @@ class TalkHelper(BaseHelper):
 
             Utils.getElementById(HotAnchorPage.resid_send_mess).click()
             if second > 0:
-                # util.take_screenShot(LoginHelper.driver, case_name, second)
-                Utils.getImage(HotAnchorHelper.driver, case_name, second)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, second)
             else:
-                # util.take_screenShot(LoginHelper.driver, case_name, 0)
-                Utils.getImage(HotAnchorHelper.driver, case_name, 0)
+                Utils.take_screenShot(HotAnchorHelper.driver, case_name, second)
+                # Utils.getImage(HotAnchorHelper.driver, case_name, 0)
             print("本次测试完成")
         except Exception as e:
             print("发现异常")

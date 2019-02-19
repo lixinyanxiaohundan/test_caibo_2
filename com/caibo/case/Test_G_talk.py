@@ -58,4 +58,9 @@ class Test_Talk(unittest.TestCase):
         case_name = "输入表情"
         Log.print_case_info_talk(case_name)
         TalkHelper.Talkd(case_name, 1)
-        pass
+        print("%s 本次测试用例执行完成" % case_name)
+
+    def test_talk7(self):
+        case_name = ""
+        Log.print_case_info_talk(case_name)
+        TalkHelper
