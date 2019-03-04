@@ -117,8 +117,8 @@ function html_escape(s) {
 <div class='heading'>
 <h4 style="font-family: Microsoft YaHei">caibo_test_report</h4>
 <p class='attribute'><strong>测试人员 : </strong> 李鹏杰</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-03-01 16:30:15</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:35.042671</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-03-01 18:40:29</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:35.042743</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 49，错误 49，通过率= 0.00%</p>
 
 <p class='description'>paltfrom:Android</p>
@@ -180,7 +180,7 @@ mobile:11111111111
 pwd:
 driver_stat=1,初始化driver
 发现异常
-HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D5566E828&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023F6DF8E898&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 Traceback (most recent call last):
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
     (self._dns_host, self.port), self.timeout, **extra_kw)
@@ -211,7 +211,7 @@ Traceback (most recent call last):
     conn = self._new_conn()
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
     self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000023D5566E828&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x0000023F6DF8E898&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
 
 During handling of the above exception, another exception occurred:
 
@@ -248,7 +248,7 @@ Traceback (most recent call last):
     _stacktrace=sys.exc_info()[2])
   File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
     raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D5566E828&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4723): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023F6DF8E898&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
 
 During handling of the above exception, another exception occurred:
 
