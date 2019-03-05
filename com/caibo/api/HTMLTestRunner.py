@@ -164,7 +164,7 @@ class Template_mixin(object):
 
     DEFAULT_TITLE = '功能自动化测试报告'
     DEFAULT_DESCRIPTION = ''
-    DEFAULT_TESTER = '李鹏杰'
+    DEFAULT_TESTER = '李鑫燕'
 
     # ------------------------------------------------------------------------
     # HTML Template
@@ -720,7 +720,7 @@ class HTMLTestRunner(Template_mixin):
         if ((uo or ue) and unum !=-1):
             hidde_status = ''
             unum=str(uo).rfind('screenShots')
-            image_url = '../../screenShots/2019_03_04/'+str(uo)[unum+11:unum+34].replace(' ', '')+'png'
+            image_url = '../../screenShots/2019_03_05/'+str(uo)[unum+11:unum+34].replace(' ', '')+'png'
 
         else:
             hidde_status = '''hidden="hidden"'''
