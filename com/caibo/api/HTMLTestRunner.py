@@ -600,7 +600,7 @@ class HTMLTestRunner(Template_mixin):
             (u'测试结果', status + "，通过率= "+self.passrate),
         ]
 
-
+    # report name result 设置report报告文件名
     def generateReport(self, test, result):
         report_attrs = self.getReportAttributes(result)
         generator = 'HTMLTestRunner %s' % __version__
@@ -720,7 +720,7 @@ class HTMLTestRunner(Template_mixin):
         if ((uo or ue) and unum !=-1):
             hidde_status = ''
             unum=str(uo).rfind('screenShots')
-            image_url = '../../screenShots/2019_03_05/'+str(uo)[unum+11:unum+34].replace(' ', '')+'png'
+            image_url = '../../screenShots/2019_03_06/'+str(uo)[unum+11:unum+34].replace(' ', '')+'png'
 
         else:
             hidde_status = '''hidden="hidden"'''
